@@ -41,10 +41,27 @@ Part 1: Create a form with only JavaScript`)
            You should now have a label and a input on your website.
            Do the same steps, appending a label/input for Email, and a submit button to your form.
  * ↓ YOUR CODE HERE ↓ */
+let myForm = document.createElement('form');
+let myLabel = document.createElement('label');
+let myInput = document.createElement('input');
+myLabel.innerHTML = "Name: ";
+myForm.append(myLabel);
+myForm.append(myInput);
+document.body.append(myForm);
 
-// console.log(myForm)
+let eLabel = document.createElement('label');
+let eInput = document.createElement('input');
+eLabel.innerHTML = "Email: ";
+myForm.append(eLabel);
+myForm.append(eInput);
+
+let mySubmitButton = document.createElement('button');
+mySubmitButton.innerHTML = "Submit";
+myForm.append(mySubmitButton);
+
+console.log(myForm)
 //Question: Besides changing the innerHTML, what other HTML things can we change using JavaScript?
-//Answer:
+//Answer: formatting (i.e. adding breaks) and styling.
 
 /*------------------------ Styling a form with only JavaScript------------------------*/
 console.log(`-------------------------- 
@@ -59,6 +76,15 @@ Part 2: Styling our form with only JavaScript`)
  *  Step 3: Give your form a display of flex, a flex-direction of column, and a max-width of 250px
  *
  * ↓ YOUR CODE HERE ↓ */
+myForm.style.backgroundColor = "rgb(200, 200, 200)";
+myForm.style.color = "rgb(200,20,10)";
+// myForm.sytle.display = 'flex';
+myForm.style.flexDirection = 'column';
+myForm.style.maxWidth = "250px";
+
+// myForm.style.display = 'flex'
+// myForm.style.flexDirection = 'column'
+// myForm.style.maxWidth = '250px'
 
 //Question: Do you prefer styling with JavaScript or CSS?
 //Answer:
