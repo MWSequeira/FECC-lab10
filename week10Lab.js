@@ -88,7 +88,7 @@ myForm.style.maxWidth = "250px";
 // myForm.style.maxWidth = '250px'
 
 //Question: Do you prefer styling with JavaScript or CSS?
-//Answer:
+//Answer: CSS
 
 /*------------------------ Creating a table with only JavaScript ------------------------*/
 console.log(`-------------------------- 
@@ -106,11 +106,45 @@ Part 3: Creating a table with only JavaScript`)
 
  * Final Step: Style your table using JavaScript starting with a border. You may need to target more element/nodes than we did with myTable.
  * ↓ YOUR CODE HERE ↓ */
+let myTable = document.createElement('table');
+let myTableRow = document.createElement('tr');
+let myTableData1 = document.createElement('td');
+let myTableData2 = document.createElement('td');
 
-// console.log(myTable)
+myTableData1.innerHTML = 'Name';
+myTableData2.innerHTML = 'Email';
+
+myTable.append(myTableRow);
+myTable.append(myTableData1)
+myTable.append(myTableData2);
+
+document.body.append(myTable);
+
+let anotherTableRow = document.createElement('tr');
+let anotherTableData1 = document.createElement('td');
+let anotherTableData2 = document.createElement('td');
+
+anotherTableData1.innerHTML = "Another Name";
+anotherTableData2.innerHTML = "Another Email";
+
+myTable.append(anotherTableRow);
+myTable.append(anotherTableData1);
+myTable.append(anotherTableData2);
+
+console.log(myTable)
+
+myTable.style.border = "3px solid black";
+myTable.style.borderCollapse = "collapse";
+myTable.style.fontFamily = "helvetica";
+myTable.style.textAlign = "center";
+myTable.style.margin = "10px";
+myTable.style.padding = "10px";
+myTable.style.backgroundColor = "#ffc600";
+
+
 //Question: While this is clearly a more round-about way of making a table, how can using JavaScript in this way
 //          more beneficial than HTML?
-//Answer:
+//Answer: I can dynamically add and remove data from this table (using JS). I can also style data in the table based on the data values.
 
 /*------------------------ Changing our body background on click ------------------------*/
 console.log(`-------------------------- 
@@ -130,6 +164,12 @@ Part 4: Changing our background on click`)
  * Step 7: Click the button in your index.html and see the background change!
  *
  * ↓ YOUR CODE HERE ↓ */
+let myButton = document.getElementById('myButton');
+
+myButton.addEventListener('click', () => {
+   document.body.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+});
+
 
 //Question: What other event listeners are there?
 //             Try them out by replacing 'click' in your function above!
