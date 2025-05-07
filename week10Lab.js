@@ -78,10 +78,11 @@ Part 2: Styling our form with only JavaScript`)
  * ↓ YOUR CODE HERE ↓ */
 myForm.style.backgroundColor = "rgb(200, 200, 200)";
 myForm.style.color = "rgb(200,20,10)";
-// myForm.sytle.display = 'flex';
+// myForm.sytle.display = 'flex'; // don't know why this line is givin an error
 myForm.style.flexDirection = 'column';
 myForm.style.maxWidth = "250px";
 
+// from the lab solution file:
 // myForm.style.display = 'flex'
 // myForm.style.flexDirection = 'column'
 // myForm.style.maxWidth = '250px'
